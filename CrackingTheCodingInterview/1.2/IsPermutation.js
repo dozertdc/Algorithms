@@ -36,3 +36,23 @@ function isPermutation2(string1, string2) {
 
 console.log(isPermutation2('abcabc', 'cabcab'));
 console.log(isPermutation2('abcd', 'efgh'));
+
+
+// O(n)
+// made second version more readable
+function isPermutation3(string1, string2) {
+    if(string1.length !== string2.length){return false;}
+    string1Counts = {};
+    string2Counts = {};
+    for(let letter of string1){
+        string1Counts[letter] = string1Counts[letter] ? string1Counts[letter]+1 : 1;
+    }
+    for(let letter of string2){
+        if(!string1Counts[letter]){
+            return false;
+        }else{
+            string1Counts[letter] = string1Counts[letter] - 1;
+        }
+    }
+    return true;
+}
