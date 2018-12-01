@@ -6,7 +6,7 @@ function sameFrequency(num1, num2){
   // if not the same length then cannot have same frequency
   if(num1.length !== num2.length) return false;
   // create hashmap of counts of first number
-  num1Counts = {};
+  let num1Counts = {};
   for(let num of num1){
       num1Counts[num] = num1Counts[num] ? num1Counts[num]+1 : 1;
   }
