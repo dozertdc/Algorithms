@@ -1,3 +1,4 @@
+// Time Complexity is o(n)
 function sameFrequency(num1, num2){
   // convert to strings
   num1 = num1.toString();
