@@ -3,5 +3,6 @@
 
 function productOfArray(arr){
     if(arr.length === 0) return 1;
+    // remove the first item from array and then recurse
     return arr[0] * productOfArray(arr.slice(1));
 }
