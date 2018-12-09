@@ -5,3 +5,7 @@ function getSum(list){
     }
     return sum;
 }
+
+function getAverage(list){
+   return getSum(list)/list.length
+}
