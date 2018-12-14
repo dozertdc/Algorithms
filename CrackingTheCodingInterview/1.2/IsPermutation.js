@@ -1,11 +1,15 @@
 // not efficient, but a good starting point to understand the problem
 // O(n log n)
 function isPermutation(string1, string2) {
+    // if they are not equal length they cannot be permutations
     if(string1.length !== string2.length){return false;}
+    // sort string 1
     string1 = string1.split('').sort().join('');
     console.log(string1);
+    // sort string 2
     string2 = string2.split('').sort().join('');
     console.log(string2);
+    // compare sorted ans return the boolean
     return string1 === string2;
 }
 
