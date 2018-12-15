@@ -19,12 +19,15 @@ console.log(isPermutation('abcd', 'efgh'));
 // O(n)
 function isPermutation2(string1, string2) {
     if(string1.length !== string2.length){return false;}
+    // create hash maps
     string1Counts = {};
     string2Counts = {};
     for(var i=0; i<string1.length; i++){
+        // if value not in hash map add it with count of 1
         if(string1Counts[string1[i]]==null){
             string1Counts[string1[i]] = 1;
         }else{
+            // if it is already in map add to count
             string1Counts[string1[i]] = string1Counts[string1[i]] + 1;
         }
     }
