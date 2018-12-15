@@ -51,6 +51,7 @@ function isPermutation3(string1, string2) {
     if(string1.length !== string2.length){return false;}
     string1Counts = {};
     string2Counts = {};
+    // more readable looping structure
     for(let letter of string1){
         string1Counts[letter] = string1Counts[letter] ? string1Counts[letter]+1 : 1;
     }
