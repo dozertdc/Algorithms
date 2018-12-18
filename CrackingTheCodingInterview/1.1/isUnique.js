@@ -13,6 +13,7 @@ function isUnique(input){
 
 }
 
+// without map 
 function isUniqueNoDataStructures(input){
 
     for(var i=0; i<input.length; i++){
